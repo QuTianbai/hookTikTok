@@ -1,0 +1,17 @@
+Package: com.cjack.hooktiktok
+Name: hooktiktok
+Version: 0.1
+Description: HOOK TikTok(10.4.0)
+Section: System
+Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: cjack
+dev: 
+Homepage: https://github.com/chenxk-j
+Depiction: 
+Maintainer: 
+Icon: 
+
