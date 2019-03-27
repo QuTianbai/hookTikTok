@@ -16,6 +16,19 @@ iOS越狱版插件，对TikTok(国际版抖音)进行hook，以实现某些功�
 ![设置页面](IMG_0040.PNG)
 ![设置页面](IMG_0041.PNG)
 
+#### 安装
+
+1. 越狱商店
+插件已经上传`BigBoss`，可以搜索下载。
+
+2. 编译文件
+将release中的`deb`文件传到设备中，然后执行如下命令
+
+```shell
+dpkg -i <package>.deb
+killall -HUP SpringBoard
+```
+3. 通过[MonkeyDev](https://github.com/AloneMonkey/MonkeyDev)安装到设备中
 
 #### 参考链接
 
