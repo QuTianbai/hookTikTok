@@ -348,7 +348,7 @@
 				MonkeyDevCopyOnBuild = NO;
 				MonkeyDevDeviceIP = "";
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 2222;
+				MonkeyDevDevicePort = 2223;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = TikTok;
@@ -374,7 +374,7 @@
 				MonkeyDevCopyOnBuild = NO;
 				MonkeyDevDeviceIP = "";
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 2222;
+				MonkeyDevDevicePort = 2223;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = TikTok;

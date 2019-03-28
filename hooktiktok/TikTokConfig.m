@@ -16,6 +16,8 @@ static TikTokConfig *config;
 
 @property (readwrite, nonatomic, strong) NSMutableDictionary *prefs;
 
+@property (readwrite, nonatomic, assign) BOOL openSelect;
+
 @property (readwrite, nonatomic, copy) NSString *countryCode;
 
 @property (readwrite, nonatomic, copy) NSString *mcc;
@@ -65,6 +67,7 @@ static TikTokConfig *config;
     self.countryCode = self.prefs[@"asd"][@"code"];
     self.mcc = self.prefs[@"asd"][@"mcc"];
     self.mnc = self.prefs[@"asd"][@"mnc"];
+    self.openSelect = [self.prefs objectForKey:@"openSelect"] == nil?YES:[self.prefs[@"openSelect"] boolValue];
     self.hasWatermark = [self.prefs objectForKey:@"hasWatermark"] == nil?NO:[self.prefs[@"hasWatermark"] boolValue];
     self.hasEndWatermark = [self.prefs objectForKey:@"hasEndWatermark"] == nil?NO:[self.prefs[@"hasEndWatermark"] boolValue];
     self.authorizedToDownload = [self.prefs objectForKey:@"cancelAuthorized"] == nil?YES:[self.prefs[@"cancelAuthorized"] boolValue];

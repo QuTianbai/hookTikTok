@@ -22,19 +22,22 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 
 %hook CTCarrier
 
+//iso，mnc，mcc
+//https://zh.wikipedia.org/wiki/%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%A0%81
+
 - (NSString *)mobileCountryCode
 {
-    return [TikTokConfig manager].mcc;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].mcc:%orig;
 }
 
 - (NSString *)isoCountryCode
 {
-    return [TikTokConfig manager].countryCode;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].countryCode:%orig;
 }
 
 - (NSString *)mobileNetworkCode
 {
-    return [TikTokConfig manager].mnc;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].mnc:%orig;
 }
 %end
 

@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TikTokConfig : NSObject
+//是否开启国家或地区选择
+@property (readonly, nonatomic, assign) BOOL openSelect;
 
 @property (readonly, nonatomic, copy) NSString *countryCode;
 

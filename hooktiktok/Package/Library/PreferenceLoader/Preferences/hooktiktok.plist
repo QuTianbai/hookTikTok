@@ -19,7 +19,7 @@
 			<key>isStaticText</key>
 			<true/>
 			<key>label</key>
-			<string>取消某些视频限制下载</string>
+			<string>国家或地区选择</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -29,53 +29,9 @@
 			<key>defaults</key>
 			<string>com.cjack.hooktiktok</string>
 			<key>key</key>
-			<string>cancelAuthorized</string>
+			<string>openSelect</string>
 			<key>label</key>
-			<string>取消限制下载</string>
-			<key>PostNotification</key>
-			<string>com.cjack.hooktiktok-preferencesChanged</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>isStaticText</key>
-			<true/>
-			<key>label</key>
-			<string>是否下载包含水印视频</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.cjack.hooktiktok</string>
-			<key>key</key>
-			<string>hasWatermark</string>
-			<key>label</key>
-			<string>下载包含水印视频</string>
-			<key>PostNotification</key>
-			<string>com.cjack.hooktiktok-preferencesChanged</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>isStaticText</key>
-			<true/>
-			<key>label</key>
-			<string>不一定能下载到包含结尾水印的视频</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.cjack.hooktiktok</string>
-			<key>key</key>
-			<string>hasEndWatermark</string>
-			<key>label</key>
-			<string>下载包含结尾水印视频</string>
+			<string>启用</string>
 			<key>PostNotification</key>
 			<string>com.cjack.hooktiktok-preferencesChanged</string>
 		</dict>
@@ -118,6 +74,7 @@
 				<string>芬兰🇫🇮</string>
 				<string>意大利🇮🇹</string>
 				<string>印度🇮🇳</string>
+				<string>巴基斯坦🇵🇰</string>
 			</array>
 			<key>validValues</key>
 			<array>
@@ -381,9 +338,85 @@
 					<key>mnc</key>
 					<string>01</string>
 				</dict>
+				<dict>
+					<key>area</key>
+					<string>巴基斯坦🇵🇰</string>
+					<key>code</key>
+					<string>PK</string>
+					<key>mcc</key>
+					<string>410</string>
+					<key>mnc</key>
+					<string>01</string>
+				</dict>
 			</array>
 			<key>default</key>
 			<integer>1</integer>
+			<key>PostNotification</key>
+			<string>com.cjack.hooktiktok-preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string>取消某些视频限制下载</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.cjack.hooktiktok</string>
+			<key>key</key>
+			<string>cancelAuthorized</string>
+			<key>label</key>
+			<string>取消限制下载</string>
+			<key>PostNotification</key>
+			<string>com.cjack.hooktiktok-preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string>是否下载包含水印视频</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.cjack.hooktiktok</string>
+			<key>key</key>
+			<string>hasWatermark</string>
+			<key>label</key>
+			<string>下载包含水印视频</string>
+			<key>PostNotification</key>
+			<string>com.cjack.hooktiktok-preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string>不一定能下载到包含结尾水印的视频</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.cjack.hooktiktok</string>
+			<key>key</key>
+			<string>hasEndWatermark</string>
+			<key>label</key>
+			<string>下载包含结尾水印视频</string>
 			<key>PostNotification</key>
 			<string>com.cjack.hooktiktok-preferencesChanged</string>
 		</dict>

@@ -42,25 +42,28 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class AWEShareServiceUtils; @class AWEUserModel; @class AWEDynamicWaterMarkExporter; @class CTCarrier; @class AWEAwemeModel; 
+@class AWEShareServiceUtils; @class AWEUserModel; @class AWEDynamicWaterMarkExporter; @class AWEAwemeModel; @class CTCarrier; 
 static NSString * (*_logos_orig$_ungrouped$CTCarrier$mobileCountryCode)(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$_ungrouped$CTCarrier$mobileCountryCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static NSString * (*_logos_orig$_ungrouped$CTCarrier$isoCountryCode)(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$_ungrouped$CTCarrier$isoCountryCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static NSString * (*_logos_orig$_ungrouped$CTCarrier$mobileNetworkCode)(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$_ungrouped$CTCarrier$mobileNetworkCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST, SEL); static void (*_logos_meta_orig$_ungrouped$AWEShareServiceUtils$_shareAwemeForSaveVideo$forBTDShareType$preprocess$delegateType$completion$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, long long, id, unsigned long long, id); static void _logos_meta_method$_ungrouped$AWEShareServiceUtils$_shareAwemeForSaveVideo$forBTDShareType$preprocess$delegateType$completion$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, long long, id, unsigned long long, id); static void (*_logos_meta_orig$_ungrouped$AWEDynamicWaterMarkExporter$addWaterMarkWithUrl$composeOptions$model$needSaveToAlbum$userName$videoOutputSize$edgeData$canDirectAddVideoheader$progress$complete$onlyForCrop$watermarkTaskType$removeSourceFile$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, long long, id, bool, id, struct CGSize, id, bool, id, id, bool, unsigned long long, bool); static void _logos_meta_method$_ungrouped$AWEDynamicWaterMarkExporter$addWaterMarkWithUrl$composeOptions$model$needSaveToAlbum$userName$videoOutputSize$edgeData$canDirectAddVideoheader$progress$complete$onlyForCrop$watermarkTaskType$removeSourceFile$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, long long, id, bool, id, struct CGSize, id, bool, id, id, bool, unsigned long long, bool); static void (*_logos_orig$_ungrouped$AWEDynamicWaterMarkExporter$waterMarkExporterFinished$)(_LOGOS_SELF_TYPE_NORMAL AWEDynamicWaterMarkExporter* _LOGOS_SELF_CONST, SEL, id); static void _logos_method$_ungrouped$AWEDynamicWaterMarkExporter$waterMarkExporterFinished$(_LOGOS_SELF_TYPE_NORMAL AWEDynamicWaterMarkExporter* _LOGOS_SELF_CONST, SEL, id); static BOOL (*_logos_orig$_ungrouped$AWEUserModel$authorizedToDownload)(_LOGOS_SELF_TYPE_NORMAL AWEUserModel* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$_ungrouped$AWEUserModel$authorizedToDownload(_LOGOS_SELF_TYPE_NORMAL AWEUserModel* _LOGOS_SELF_CONST, SEL); 
 
 #line 23 "/Users/chenxk/Documents/myworkspace/hooktiktok/hooktiktok/hooktiktok.xm"
 
 
 
+
+
+
 static NSString * _logos_method$_ungrouped$CTCarrier$mobileCountryCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    return [TikTokConfig manager].mcc;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].mcc:_logos_orig$_ungrouped$CTCarrier$mobileCountryCode(self, _cmd);
 }
 
 
 static NSString * _logos_method$_ungrouped$CTCarrier$isoCountryCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    return [TikTokConfig manager].countryCode;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].countryCode:_logos_orig$_ungrouped$CTCarrier$isoCountryCode(self, _cmd);
 }
 
 
 static NSString * _logos_method$_ungrouped$CTCarrier$mobileNetworkCode(_LOGOS_SELF_TYPE_NORMAL CTCarrier* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    return [TikTokConfig manager].mnc;
+    return [TikTokConfig manager].openSelect?[TikTokConfig manager].mnc:_logos_orig$_ungrouped$CTCarrier$mobileNetworkCode(self, _cmd);
 }
 
 
@@ -125,7 +128,7 @@ static BOOL _logos_method$_ungrouped$AWEUserModel$authorizedToDownload(_LOGOS_SE
 }
 
 
-static __attribute__((constructor)) void _logosLocalCtor_38b3eff8(int __unused argc, char __unused **argv, char __unused **envp)
+static __attribute__((constructor)) void _logosLocalCtor_c9e1074f(int __unused argc, char __unused **argv, char __unused **envp)
 {
     notificationCallback(NULL, NULL, NULL, NULL, NULL);
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
